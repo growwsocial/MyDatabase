@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hacking Animation</title>
+  <link rel="stylesheet" href="https://growwsocial.github.io/MyDatabase/hdbsvskusbnsnsgaiiwbwsbsjsis.css">
+  <link rel="stylesheet" href="https://growwsocial.github.io/MyDatabase/impstyle.css">
+  <link rel="stylesheet" href="https://growwsocial.github.io/MyDatabase/import.css">
+</head>
+<body>
+  <div id="header">
+    <div>MANORANJAN'S DATABASE</div>
+  </div>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search (Full Name)...">
+    <button id="search-button" onclick="searchEntry()">🔍</button>
+  </div>
+
+  <div id="search-message" style="color: #0f0; text-align: center; margin-top: 20px;"></div>
+
+  <div id="container">
+    <div id="content-placeholder"></div>
+    <div id="figure">
+      <div id="figure-a7"></div>
+      <div id="f1"></div>
+      <div id="f2"></div>
+      <div id="f3">
+        <div id="f31">
+          <span class="f311"><b></b></span>
+          <span class="f312"><b></b></span>
+        </div>
+        <div id="f32">
+          <span class="f321"></span>
+          <span class="f322"></span>
+        </div>
+        <div id="f33"></div>
+        <div id="f34"></div>
+      </div>
+      <div id="f4">
+        <div id="f41"></div>
+        <div id="f42"></div>
+        <div id="f43" class="f431"></div>
+        <div id="f43" class="f432"></div>
+        <div id="f43" class="f433"></div>
+        <div id="f43" class="f434"></div>
+      </div>
+      <div id="f5"></div>
+      <div id="f6"></div>
+      <div id="f7">
+        <div id="f71"></div>
+        <div id="f72"></div>
+      </div>
+      <div id="f8">
+        <div id="f81"></div>
+        <div id="f82"></div>
+      </div>
+      <div id="f9">
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <audio id="background-audio" preload="auto">
+    <source src="https://github.com/Short-Zed/Movie-Responsive-Site/raw/main/X2Download.app%20-%20Binary%20Code%20-%20Interface%20Sound%20Effects%20_%20Sci-Fi%20Computer%20Beeps%20%26%20Data%20Processing%20Sounds%20(128%20kbps).mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="https://growwsocial.github.io/MyDatabase/audioplayer.js"></script>
+  <script src="https://growwsocial.github.io/MyDatabase/script.js"></script>
+
+  <!--  Entry Example -->
+  <div class="data-card" id="1">
+    <div class="crime-picture">
+      <img src="https://i.postimg.cc/SR5gr6tR/IMG-20240727-220540-551.jpg" alt="Jayadeba Swain">
+    </div>
+    <div class="crime-details">
+      <div class="name">Jayadeba Swain</div>
+      <div class="father">Father: Arjuna Swain</div>
+      <div class="dob">D.O.B: XX/XX/20XX</div>
+      <div class="mobile">Mobile: +91 8984155565</div>
+      <div class="email">Email: Not Available</div>
+      <div class="data1">Branch: Mechanical</div>
+      <div class="address">Address: Not Available</div>
+      
+      <div class="reward-banner">Registration No: F23158004020</div>
+      <button class="instagram-button" onclick="window.location.href='https://www.instagram.com/i__am_r_e_x?igsh=NGcwNjR3dDdvcnJ6';">Instagram</button>
+      <button class="whatsapp-button" onclick="window.location.href='https://wa.me/+918984155565';">Whatsapp</button>
+    </div>
+  </div>
+  
+   <div class="data-card" id="1">
+    <div class="crime-picture">
+      <img src="https://i.postimg.cc/SR5gr6tR/IMG-20240727-220540-551.jpg" alt="Jayadeba Swain">
+    </div>
+    <div class="crime-details">
+      <div class="name">abhijit Swain</div>
+      <div class="father">Father: Arjuna Swain</div>
+      <div class="dob">D.O.B: XX/XX/20XX</div>
+      <div class="mobile">Mobile: +91 8984155565</div>
+      <div class="email">Email: Not Available</div>
+      <div class="data1">Branch: Mechanical</div>
+      <div class="address">Address: Not Available</div>
+      
+      <div class="reward-banner">Registration No: F23158004020</div>
+      <button class="instagram-button" onclick="window.location.href='https://www.instagram.com/i__am_r_e_x?igsh=NGcwNjR3dDdvcnJ6';">Instagram</button>
+      <button class="whatsapp-button" onclick="window.location.href='https://wa.me/+918984155565';">Whatsapp</button>
+    </div>
+  </div>
+
+  <script>
+    function searchEntry() {
+      const query = document.getElementById('search-input').value.toLowerCase().trim();
+      const entries = document.querySelectorAll('.data-card');
+      const messageElement = document.getElementById('search-message');
+      let found = false;
+      let resultCount = 0;
+
+      // If the search input is empty, hide all entries and clear the message
+      if (query === '') {
+        entries.forEach(entry => {
+          entry.style.display = 'none';
+        });
+        messageElement.textContent = 'Please enter a search term';
+        return;
+      }
+
+      // If the search input is not empty, show or hide entries based on the query
+      entries.forEach(entry => {
+        const name = entry.querySelector('.name').textContent.toLowerCase();
+        if (name.includes(query)) {
+          entry.style.display = 'block';
+          found = true;
+          resultCount++;
+        } else {
+          entry.style.display = 'none';
+        }
+      });
+
+      // Update the message based on the search results
+      if (found) {
+        messageElement.textContent = `${resultCount} result${resultCount > 1 ? 's' : ''} found`;
+      } else {
+        messageElement.textContent = 'No results found';
+      }
+    }
+
+    // Hide all data cards initially
+    document.addEventListener('DOMContentLoaded', () => {
+      const entries = document.querySelectorAll('.data-card');
+      entries.forEach(entry => {
+        entry.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>
