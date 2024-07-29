@@ -1,0 +1,56 @@
+ body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://i.postimg.cc/W49WqRgm/Screenshot-2024-07-29-11-29-58-099-net-zedge-android.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #0f0; /* Set default text color to green for hacker style */
+    }
+    /* Header styles */
+    #header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+      color: #fff;
+    }
+    /* Search bar container fixed position */
+    #search-container {
+      position: fixed; /* Fixed positioning to stay in place */
+      top: 350px;        /* Adjust as needed */
+      right: 20px;      /* Adjust as needed */
+      display: flex;
+      align-items: center;
+      z-index: 1000;    /* Ensures it stays on top */
+    }
+    #search-input {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #0f0;
+      background-color: #000;
+      color: #0f0;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+    }
+    #search-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 2px solid #0f0;
+      background-color: #000;
+      color: #0f0;
+      cursor: pointer;
+      border-radius: 0 4px 4px 0;
+    }
+    #search-button:hover {
+      background-color: #0f0;
+      color: #000;
+    }
+    /* Container to ensure the rest of the content can be moved */
+    #container {
+      position: relative; /* Allows for positioning relative to its normal position */
+      top: 190px;        /* Adjust as needed */
+      left: 200px;        /* Adjust as needed */
+      z-index: 1;        /* Ensure it stays below the search bar */
+    }
