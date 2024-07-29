@@ -69,7 +69,7 @@
     position: absolute; /* Positioned absolutely relative to the nearest positioned ancestor */
     width: 300px; /* Adjustable width */
     height: 310px; /* Adjustable height */
-    top: 385px; /* Adjust top position */
+    top: 530px; /* Adjust top position */
     left: 30px; /* Adjust left position */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
