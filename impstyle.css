@@ -157,7 +157,7 @@
     font-size: 20px; /* Custom font size */
     font-weight: bold;
     top: 87px; /* Adjust the top position as needed */
-    left: 73px; /* Adjust the left position as needed */
+    left: 50px; /* Adjust the left position as needed */
   }
 
   .father {
@@ -189,3 +189,6 @@
     top: 245px; /* Adjust the top position as needed */
     left: 10px; /* Adjust the left position as needed */
   }
+  .popup {
+        display: none;
+    }
