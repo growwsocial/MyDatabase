@@ -1,0 +1,28 @@
+.telegram-img img, .Facebook-img img, .YouTube-img img, .Instagram-img img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+}
+
+.telegram-img img {
+    top: 94%;
+    left: 90%;
+}
+
+.Facebook-img img {
+    top: 1%;
+    left: 90%;
+}
+
+.YouTube-img img {
+    top: 94%;
+    left: 11%;
+}
+
+.Instagram-img img {
+    top: 1%;
+    left: 11%;
+    width: 80px;
+    height: 80px;
+}
