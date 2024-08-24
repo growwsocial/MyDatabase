@@ -1,4 +1,105 @@
-body {
+ .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px 40px 20px;
+            text-align: center;
+        }
+
+        .login-container, .signup-container {
+            display: none;
+        }
+
+        .login-container.active, .signup-container.active {
+            display: block;
+        }
+
+        input[type="text"], input[type="password"], .input-field {
+            width: 100%;
+            padding: 9px;
+            margin: 6px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background-color: #fafafa;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+
+        .next-btn {
+            background-color: #4cb5f9;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: not-allowed;
+            width: 100%;
+            height: 40px;
+            margin-top: 10px;
+        }
+
+        .login-link {
+            color: #ccc;
+            position: relative;
+            top: 150px; 
+            left: 10px;
+        }
+
+        .signup-link a, .login-link a {
+            color: #0095f6;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .fbregbtn {
+            position: absolute;
+            top: 720px;
+            left: 50%;
+            width: 340px;
+            transform: translate(-50%, -50%);
+            background-color: #0095f6;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .fb-icon {
+            width: 20px;
+            height: auto;
+            margin-right: 8px;
+        }
+
+        .fbregbtn:hover {
+            background-color: #145dbf;
+        }
+
+        .tab-switch {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .tab-switch div {
+            width: 50%;
+            padding: 10px 0;
+            cursor: pointer;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-switch div.active {
+            border-bottom: 2px solid black;
+        }
+
+        html, body {
             margin: 0;
             padding: 0;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -6,20 +107,20 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
         }
 
-        .login-container {
-            padding: 40px 40px 20px;
-            text-align: center;
+        .iglogo {
+            width: 120px;
+            height: auto;
+            position: relative;
+            top: -110px;
+            left: center;
         }
 
-        .login-container img {
-            width: 175px;
-            margin-bottom: 20px;
-        }
-
-        .fb-login-btn {
+        .fbignbtn {
             display: inline-flex; 
             align-items: center;
             justify-content: center;
@@ -39,13 +140,7 @@ body {
             left: 5px; 
         }
 
-        .fb-icon {
-            width: 18px;
-            height: 18px;
-            margin-right: 8px;
-        }
-
-        .separator {
+        .devider {
             display: flex;
             align-items: center;
             color: #8e8e8e;
@@ -56,41 +151,36 @@ body {
             top: -70px; 
         }
 
-        .separator::before,
-        .separator::after {
+        .devider::before,
+        .devider::after {
             content: '';
             flex: 1;
             height: 1px;
             background-color: #dbdbdb;
         }
 
-        .separator::before {
+        .devider::before {
             margin-right: 18px;
         }
 
-        .separator::after {
+        .devider::after {
             margin-left: 18px;
         }
 
-        input[type="text"], 
-        input[type="password"] {
+        .input-box {
             width: 100%;
-            padding: 9px;
-            margin: 6px 0;
-            border: 1px solid #dbdbdb;
-            border-radius: 3px;
-            background-color: #fafafa;
-            font-size: 12px;
-            box-sizing: border-box;
+            max-width: 300px;
+            height: 40px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 20px;
+            position: relative;
+            top: -70px;
         }
 
-        input[type="text"]::placeholder, 
-        input[type="password"]::placeholder {
-            color: #8e8e8e;
-            font-size: 12px;
-        }
-
-        .forgot-password {
+        .resetps {
             display: block;
             text-align: right;
             margin: 12px 0;
@@ -98,11 +188,11 @@ body {
             font-size: 15px;
             text-decoration: none;
             position: relative;
-            top: -70px; 
-            right: 10px; 
+            top: -80px; 
+            right: -10px; 
         }
 
-        .login-btn {
+        .login {
             display: inline-block;
             background-color: #4cb5f9;
             color: #fff;
@@ -116,80 +206,142 @@ body {
             height: 40px;
             margin-top: 10px;
             position: relative;
-            top: -70px;
+            top: -85px;
             left: 5px;
         }
 
-        .login-btn.enabled {
-            background-color: #0095f6;
-            cursor: pointer;
-        }
-
-        .signup-link {
+        .signup {
             margin-top: 20px;
             font-size: 15px;
             position: relative;
-            top: -70px;
-            left: 52px;
+            color: #ccc;
+            top: -90px;
+            right: centre;
             width: auto;
             height: auto;
         }
 
-        .signup-link a {
+        .signup a {
             color: #0095f6;
             text-decoration: none;
             font-weight: bold;
         }
 
-        .terms {
-            font-size: 12px;
-            color: #8e8e8e;
-            margin-top: 20px;
-            line-height: 1.5;
+        .login.enabled {
+            background-color: #0095f6;
+            cursor: pointer;
         }
 
-        .meta-logo {
-            margin-top: 30px;
-            font-size: 12px;
-            color: #8e8e8e;
+        .login-container {
+            padding: 40px 40px 20px;
+            text-align: center;
         }
 
-        .meta-logo img {
-            width: 60px;
+        .login-container img {
+            width: 175px;
+            margin-bottom: 20px;
         }
 
-        .instagram-logo {
-            width: 120px;
+        .meta {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .from-text { 
+            margin: 0; 
+            font-size: 14px;  
+            position: relative; 
+            top: -30px; 
+            right: -50px;  
+        }
+
+        .meta img {
+            width: 70px; 
             height: auto;
+        }
+
+        .next-btn {
+            background-color: #50b4fc; 
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .next-btn.filled {
+            background-color: #0894f4;
+        }
+
+        .register-title {
+            text-align: center;
+            margin: 20px 0;
             position: relative;
-            top: -110px;
-            left: center;
+            left: 0;
+            top: -250px;
+        }
+
+        .tab-switch {
+            display: flex;
+            justify-content: space-around;
+            margin: 0 auto;
+            position: relative;
+            top: -200px;
         }
 
         .input-field {
-            width: 100%;
-            max-width: 300px;
-            height: 40px;
-            padding: 10px;
-            font-size: 14px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-top: 20px;
+            display: block;
+            margin: 20px auto; 
             position: relative;
-            top: -70px;
+            top: -180px; 
         }
 
-        .meta-logo {
-            width: 100px;
-            height: auto;
+        .next-btn {
+            display: block;
+            margin: 20px auto; 
             position: relative;
-            top: 50px;
-            left: 50px;
+            top: -180px; 
         }
 
-        .text {
-            position: absolute;
-            top: 47px;
-            left: 87px;
+        .smstxt {
+            position: relative;
+            top: -180px;
+            left: 10px;
+            margin: 0;
             font-size: 14px;
+            color: #ccc;
+            line-height: 1.0;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            margin: 20px auto;
         }
+        .password-container {
+                    position: relative;
+                    width: 100%;
+                }
+
+                .input-box {
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding-right: 60px; /* Ensure space for the Show button */
+                }
+
+                .toggle-password {
+                    position: absolute;
+                    right: 15px; 
+                    top: -45px;
+                    transform: translateY(-50%);
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    color: black; /* Bloody black color (dark red) */
+                    font-size: 0.9rem;
+                    padding: 0;
+                    margin: 0;
+                    display: none; /* Initially hidden */
+                }
