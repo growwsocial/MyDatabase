@@ -1,0 +1,195 @@
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            padding: 40px 40px 20px;
+            text-align: center;
+        }
+
+        .login-container img {
+            width: 175px;
+            margin-bottom: 20px;
+        }
+
+        .fb-login-btn {
+            display: inline-flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: #0095f6;
+            color: #fff;
+            padding: 8px 16px; 
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 310px; 
+            height: 45px; 
+            margin-bottom: 10px;
+            position: relative;
+            top: -70px; 
+            left: 5px; 
+        }
+
+        .fb-icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            color: #8e8e8e;
+            font-size: 13px;
+            margin: 20px 0;
+            font-weight: 500;
+            position: relative;
+            top: -70px; 
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #dbdbdb;
+        }
+
+        .separator::before {
+            margin-right: 18px;
+        }
+
+        .separator::after {
+            margin-left: 18px;
+        }
+
+        input[type="text"], 
+        input[type="password"] {
+            width: 100%;
+            padding: 9px;
+            margin: 6px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background-color: #fafafa;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]::placeholder, 
+        input[type="password"]::placeholder {
+            color: #8e8e8e;
+            font-size: 12px;
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: right;
+            margin: 12px 0;
+            color: #0095f6;
+            font-size: 15px;
+            text-decoration: none;
+            position: relative;
+            top: -70px; 
+            right: 10px; 
+        }
+
+        .login-btn {
+            display: inline-block;
+            background-color: #4cb5f9;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: not-allowed;
+            width: 100%;
+            height: 40px;
+            margin-top: 10px;
+            position: relative;
+            top: -70px;
+            left: 5px;
+        }
+
+        .login-btn.enabled {
+            background-color: #0095f6;
+            cursor: pointer;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+            font-size: 15px;
+            position: relative;
+            top: -70px;
+            left: 52px;
+            width: auto;
+            height: auto;
+        }
+
+        .signup-link a {
+            color: #0095f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .terms {
+            font-size: 12px;
+            color: #8e8e8e;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        .meta-logo {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+
+        .meta-logo img {
+            width: 60px;
+        }
+
+        .instagram-logo {
+            width: 120px;
+            height: auto;
+            position: relative;
+            top: -110px;
+            left: center;
+        }
+
+        .input-field {
+            width: 100%;
+            max-width: 300px;
+            height: 40px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 20px;
+            position: relative;
+            top: -70px;
+        }
+
+        .meta-logo {
+            width: 100px;
+            height: auto;
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        .text {
+            position: absolute;
+            top: 47px;
+            left: 87px;
+            font-size: 14px;
+        }
