@@ -1,0 +1,208 @@
+body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .page {
+            display: none;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #page1 { background-color: #cf0605; }
+        #page2 { background-color: #a635bd; }
+        #page3 { background-color: #e33638; }
+        #page4 { background-color: #3342d7; }
+
+        .page.active {
+            display: block;
+        }
+        
+        .button-container {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        button#prevButton { background-color: #777; color: white; }
+        button#nextButton { background-color: #555; color: white; }
+        
+        button:hover {
+            background-color: #444;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* Popup Styles */
+        .popup {
+            display: block; /* Automatically show the popup */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 400px;
+            background-color: #222;
+            color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: left;
+        }
+
+        .popup h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .popup select, .popup input, .popup button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .input-group input {
+            flex: 1;
+            margin-left: 5px;
+        }
+
+        .country-code {
+            width: 20px; /* Set width to 20px */
+            text-align: center;
+            margin-right: 5px;
+            border: none;
+            border-radius: 5px;
+            padding: 5px; /* Adjust padding to fit */
+            background-color: #333;
+            color: white;
+            font-size: 14px; /* Adjust font size if needed */
+        }
+
+        .mobile-number {
+            flex: 1;
+        }
+
+        /* Countdown Styles */
+        #countdown {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        /* Hide button initially */
+        #viewStatusButton {
+            display: none;
+        }
+
+       /* Page 4 Styles */
+#page4 {
+    text-transform: uppercase;
+    color: #f0f0f0; /* Light gray for the overall text color */
+}
+
+#page4 .status {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffcc00; /* Yellow for status to make it stand out */
+}
+
+#page4 .details {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 400px;
+    color: #e0e0e0; /* Slightly darker gray for the details */
+}
+
+#page4 .reference-number {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #00cc99; /* Green for the reference number */
+}
+
+/* Specific Text Colors */
+#page4 .details p {
+    margin: 10px 0;
+}
+
+#page4 .provider-label {
+    color: #ff5733; /* Orange for PROVIDER */
+}
+
+#page4 .state-label {
+    color: #33aaff; /* Light blue for STATE */
+}
+
+#page4 .mobile-label {
+    color: #ff66cc; /* Light pink for MOBILE NUMBER */
+}
+
+#page4 .data-plan-label {
+    color: #66ff66; /* Light green for DATA PLAN */
+}
+/* Box Container Styles */
+.box-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.box-container.valid {
+    border: 2px solid #33cc33; /* Green border for valid input */
+}
+
+.text.invalid {
+    border: 2px solid #cc3333; /* Red border for invalid input */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.highlighttxt {
+    color: #ff15a8;    
+}
+
+@keyframes blink {
+    0% { background-color: #0f0; }
+    50% { background-color: #FF073A; }
+    100% { background-color: #0f0; }
+}
+
+.blinking {
+    animation: blink 1s infinite;
+}
+
