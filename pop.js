@@ -62,7 +62,7 @@ let currentPage = 1;
         }
 
         function startCountdown() {
-            let timeLeft = 130;
+            let timeLeft = 99;
             document.getElementById('countdown').textContent = timeLeft;
             document.getElementById('viewStatusButton').style.display = 'none'; // Hide button initially
             
